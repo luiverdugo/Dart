@@ -1,0 +1,33 @@
+void main() {
+  final rawjson = {'nombre': 'tony stark', 'poder': 'dinero'};
+
+  final ironman = new heroe.fromjson(rawjson);
+
+  print(ironman);
+
+  //final wolverine = new heroe('logan', 'regeneracion');
+
+  //wolverine.nombre = 'logan';
+  //wolverine.poder = 'regeneracion';
+
+  //print(wolverine);
+}
+
+class heroe {
+  String nombre;
+  String poder;
+
+  heroe(this.nombre, this.poder); //constructor
+
+  heroe.fromjson(Map<String, String> json)
+      : this.nombre = json['nombre']!,
+        this.poder = json['poder'] ?? 'no tiene poder';
+
+  //} //
+
+  //sobre escribir la funcion @override
+  //@override
+  String toString() {
+    return 'Nombre: ${nombre}\nPoder: ${poder}';
+  }
+}
