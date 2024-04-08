@@ -1,0 +1,100 @@
+void main() {
+  print('hola mundo');
+}
+
+
+--------------------
+
+void main() {
+  // Strings
+  var nombre = 'luis';
+  var apellido = 'verdugo';
+  
+  nombre = 'juan';
+  
+  print('$nombre $apellido');
+}
+
+------------------------
+
+void main() {
+  // Strings
+  final nombre = 'luis';
+  var apellido = 'verdugo';
+  
+  nombre = 'juan';
+  
+  print('$nombre $apellido');
+}
+----------------------
+
+void main() {
+  //numeros
+  int empleados =10;
+  double salario = 1856.25;
+  
+  print(empleados);
+  print(salario);
+}
+------------------------
+void main() {
+  bool isactive=true;
+  
+  if(isactive){
+    print('activo');
+  } else{
+    print('falso');
+  }
+}
+-------------------------
+void main() { 
+  List numeros=[1,2,3,4,5,6,7,8,9,10];
+  
+  numeros.add(11);
+  
+  print(numeros);
+  print(numeros[1]);
+}
+--------------------------
+void main() { 
+  List<int> numeros=[1,2,3,4,5,6,7,8,9,10];
+  
+  numeros.add(11);
+  
+  print(numeros);
+  print(numeros[1]);
+  
+  
+  final masnumeros = List.generate(100, (int index) => index); //10
+  print(masnumeros);
+}
+------------------------------
+void main() {
+  Map persona = {'nombre': 'luis', 'edad': 35, 'soltero': true};
+  print(persona);
+  print(persona['nombre']);
+}
+----------------------------
+void main() {
+  Map<String, dynamic> persona = {
+    'nombre': 'luis',
+    'edad': 35,
+    'soltero': true
+  };
+
+  persona.addAll({'segundonombre': 'manuel'});
+  print(persona);
+  print(persona['nombre']);
+  print(persona['segundonombre']);
+}
+--------------------------
+void main() {
+  String nombre = 'Luis';
+
+  saludar();
+  saludar(nombre);
+}
+
+void saludar([String nombre = 'no name']) {
+  print('hola $nombre');
+}
